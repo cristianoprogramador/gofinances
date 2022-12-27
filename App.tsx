@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { ThemeProvider } from "styled-components";
+import "intl";
+import "intl/locale-data/jsonp/pt-BR";
 import theme from "./src/global/styles/theme";
 
 import {
