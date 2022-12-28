@@ -3,6 +3,7 @@ import { ThemeProvider } from "styled-components";
 import "intl";
 import "intl/locale-data/jsonp/pt-BR";
 import theme from "./src/global/styles/theme";
+import { StatusBar } from "react-native";
 
 import {
   Poppins_400Regular,
@@ -37,6 +38,11 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <NavigationContainer>
+        <StatusBar
+          barStyle="light-content"
+          backgroundColor="transparent"
+          translucent
+        />
         <AppRoutes />
       </NavigationContainer>
     </ThemeProvider>
