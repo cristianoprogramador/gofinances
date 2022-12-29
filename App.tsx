@@ -13,6 +13,8 @@ import {
 } from "@expo-google-fonts/poppins";
 import { NavigationContainer } from "@react-navigation/native";
 import { AppRoutes } from "./src/routes/app.routes";
+import { SignIn } from "./src/screens/SignIn";
+import { AuthProvider } from "./src/hooks/auth";
 
 export default function App() {
   const [canShow, setCanShow] = useState(false);
@@ -43,7 +45,10 @@ export default function App() {
           backgroundColor="transparent"
           translucent
         />
-        <AppRoutes />
+
+        <AuthProvider>
+          <SignIn />
+        </AuthProvider>
       </NavigationContainer>
     </ThemeProvider>
   );
